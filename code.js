@@ -1,0 +1,1 @@
+let u = 3.15, g = 9.806,H=0.98,angtorad=(x)=>{return (x*Math.PI)/180},angles=[angtorad(15),angtorad(20),angtorad(25),angtorad(30),angtorad(35)],res=[],r=0,i=0,expectedrange=(x)=>{for(i=0;i<5;i++)r=((u**2)*Math.cos(x[i])/g)*(Math.sin(x[i])+Math.sqrt( (Math.sin(x[i]))**2 + (2*g*H)/(u**2)) ),res.push(r);};expectedrange(angles);console.table([angles,res]);
